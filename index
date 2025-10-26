@@ -5,17 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting...</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      background: url('https://imagecdn.live/images/webp/c90daa17-a796-4a1e-9fe3-007ab4a4f87f.webp') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://imagecdn.live/images/webp/c90daa17-a796-4a1e-9fe3-007ab4a4f87f.webp');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+    .text {
+      color: white;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
+  <div class="bg"></div>
+  <div class="text">Redirecting, please wait...</div>
+
   <script>
-    window.location.href = "https://reptiledoodle.com/jza4tvjdcs?key=ef0e6578fda9dfad8d260f8c9e94b9ee";
+    // 2 seconds delay before redirect
+    setTimeout(() => {
+      window.location.href = "https://reptiledoodle.com/jza4tvjdcs?key=ef0e6578fda9dfad8d260f8c9e94b9ee";
+    }, 2000);
   </script>
 </body>
 </html>
